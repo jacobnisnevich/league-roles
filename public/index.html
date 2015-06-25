@@ -36,31 +36,33 @@
         <div class="container">
             <h5>Champion Select Entry</h5>
             <div id="form-view">
-                <form id="chatEntry">
-                    <div id="inputFormGroup">
-                        <label for="inputRegion">Select your Region</label>
-                        <select name="inputRegion" id="inputRegion">
-                            <option value="" disabled selected>Choose your region</option>
-                            <option value="br">Brazil</option>
-                            <option value="eune">EU Nordic & East</option>
-                            <option value="euw">EU West</option>
-                            <option value="lan">Latin America North</option>
-                            <option value="lasa">Latin America South</option>
-                            <option value="kr">Korea</option>
-                            <option value="na">North America</option>
-                            <option value="oce">Oceania</option>
-                            <option value="tr">Turkey</option>
-                            <option value="ru">Russia</option>
-                        </select>
-                        <div class="input-field">
-                            <label for="inputChat">Enter your Champion Select Chat</label>
-                            <textarea name="inputChat" id="inputChat" class="materialize-textarea"></textarea>
+                <div class="custom-card z-depth-1 white">
+                    <form id="chatEntry">
+                        <div id="inputFormGroup">
+                            <label for="inputRegion">Select your Region</label>
+                            <select name="inputRegion" id="inputRegion">
+                                <option value="" disabled selected>Choose your region</option>
+                                <option value="br">Brazil</option>
+                                <option value="eune">EU Nordic & East</option>
+                                <option value="euw">EU West</option>
+                                <option value="lan">Latin America North</option>
+                                <option value="lasa">Latin America South</option>
+                                <option value="kr">Korea</option>
+                                <option value="na">North America</option>
+                                <option value="oce">Oceania</option>
+                                <option value="tr">Turkey</option>
+                                <option value="ru">Russia</option>
+                            </select>
+                            <div class="input-field">
+                                <label for="inputChat">Enter your Champion Select Chat</label>
+                                <textarea name="inputChat" id="inputChat" class="materialize-textarea"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <button class="btn waves-effect waves-light light-blue lighten-1" id="chatSubmit" type="button">
-                        Submit
-                    </button>
-                </form>
+                        <button class="btn waves-effect waves-light light-blue lighten-1" id="chatSubmit" type="button">
+                            Submit
+                        </button>
+                    </form>
+                </div>
             </div>
             <div id="spinner-view">
                 <div style="text-align:center">
@@ -141,6 +143,18 @@
     </div>  <div class="section light-blue lighten-3" id="about">
         <div class="container">
             <h5>About</h5>
+            <div class="card light-blue lighten-5">
+                <div class="card-content">
+                    <div class="card-title-custom">Background</div>
+                    <p><i>League of Legends</i> is a popular multiplayer online battle arena game created by Riot Games. In its most common game mode, <i>League of Legends</i> is a tactical 5-against-5 strategy game in which each player has one of five different roles. At the start of <i>League of Legends</i> game, each team must decide between themselves which player will play role. This can frequently be chaotic and unsportsmanlike if more than one player wants the same role, as will often happen.
+                </div>
+            </div>
+            <div class="card light-blue lighten-5">
+                <div class="card-content">
+                    <div class="card-title-custom">LeagueRoles</div>
+                    <b>LeagueRoles</b> parses the data from the pre-game chat to determine which player should play in which lane and role based on previous success in roles and which roles they can and cannot play, as expressed in the pre-game chat. <b>LeagueRoles</b> uses basic language parsing to determine which players are in the game and which roles they can and cannot play. The server then matches each player to a role using weighted bipartite matching with the Ford-Fulkerson network flow algorithm (this is done with the <code>graphmatching</code> Ruby gem).
+                </div>
+            </div>
         </div>
     </div>
     <footer class="page-footer light-blue darken-1">
