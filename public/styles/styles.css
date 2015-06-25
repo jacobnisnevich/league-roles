@@ -41,3 +41,7 @@ footer.page-footer {
     font-size: 24px;
     padding-bottom: 5px;
 }
+
+.shadow {
+    text-shadow: #333 2px 2px 8px;
+}
