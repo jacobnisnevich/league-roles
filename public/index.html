@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LeagueRoles</title>
+
+    <!-- JQuery JS -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <!-- LeagueRoles JS -->
+    <script src="js/scripts.js"></script>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- LeagueRoles CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <nav class="light-blue">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">&nbsp;LeagueRoles</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#entry">Chat Entry</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="section light-blue lighten-5" id="entry">
+        <div class="container">
+            <h5>Champion Select Entry</h5>
+            <div id="form-view">
+                <form id="chatEntry">
+                    <div id="inputFormGroup">
+                        <label for="inputRegion">Select your Region</label>
+                        <select name="inputRegion" id="inputRegion">
+                            <option value="" disabled selected>Choose your region</option>
+                            <option value="br">Brazil</option>
+                            <option value="eune">EU Nordic & East</option>
+                            <option value="euw">EU West</option>
+                            <option value="lan">Latin America North</option>
+                            <option value="lasa">Latin America South</option>
+                            <option value="kr">Korea</option>
+                            <option value="na">North America</option>
+                            <option value="oce">Oceania</option>
+                            <option value="tr">Turkey</option>
+                            <option value="ru">Russia</option>
+                        </select>
+                        <div class="input-field">
+                            <label for="inputChat">Enter your Champion Select Chat</label>
+                            <textarea name="inputChat" id="inputChat" class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light light-blue lighten-1" id="chatSubmit" type="button">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <div id="spinner-view">
+                <div style="text-align:center">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="results-view">
+                <table id="results-table" class="centered responsive-table white z-depth-2 hoverable">
+                    <thead>
+                        <tr>
+                            <th data-field="summoner-name">Summoner Name</th>
+                            <th data-field="optimal-role">Optimal Role</th>
+                            <th data-field="optimal-role-kda">Rank</th>
+                            <th data-field="played-champions" colspan="3">Most Played Champions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td id="summoner-0">TheCupcakegod</td>
+                            <td>Middle</td>
+                            <td id="league-0">5.4/3.6/10.2</td>
+                            <td ><img id="image-first-0" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Thresh.png" alt="" class="circle responsive-img"></td>
+                            <td ><img id="image-second-0" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Xerath.png" alt="" class="circle responsive-img"></td>
+                            <td ><img id="image-third-0" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Morgana.png" alt="" class="circle responsive-img"></td>
+                        </tr>
+                        <tr>
+                            <td id="summoner-1">Jasoniful</td>
+                            <td>ADC</td>
+                            <td id="league-1">5.4/3.6/10.2</td>
+                            <td><img id="image-first-1" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Caitlyn.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-second-1" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Jinx.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-third-1" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Graves.png" alt="" class="circle responsive-img"></td>
+                        </tr>
+                        <tr>
+                            <td id="summoner-2">lingyao211</td>
+                            <td>Jungle</td>
+                            <td id="league-2">5.4/3.6/10.2</td>
+                            <td><img id="image-first-2" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/MasterYi.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-second-2" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Swain.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-third-2" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Malphite.png" alt="" class="circle responsive-img"></td>
+                        </tr>
+                        <tr>
+                            <td id="summoner-3">EDDYPASTER|NO</td>
+                            <td>Support</td>
+                            <td id="league-3">5.4/3.6/10.2</td>
+                            <td><img id="image-first-3" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Vayne.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-second-3" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Graves.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-third-3" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Jinx.png" alt="" class="circle responsive-img"></td>
+                        </tr>
+                        <tr>
+                            <td id="summoner-4">DaveStrider413</td>
+                            <td>Top</td>
+                            <td id="league-4">5.4/3.6/10.2</td>
+                            <td><img id="image-first-4" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/DrMundo.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-second-4" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Malphite.png" alt="" class="circle responsive-img"></td>
+                            <td><img id="image-third-4" src="http://ddragon.leagueoflegends.com/cdn/5.7.2/img/champion/Ezreal.png" alt="" class="circle responsive-img"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn waves-effect waves-light light-blue lighten-1" id="results-back">
+                    Back
+                </button>
+            </div>
+        </div>
+    </div>  <div class="section light-blue lighten-3" id="about">
+        <div class="container">
+            <h5>About</h5>
+        </div>
+    </div>
+    <footer class="page-footer light-blue darken-1">
+        <div class="container">
+            <p class="grey-text text-lighten-4" style="text-align: center">LeagueRoles is built with Materialize, Ruby, and Sinatra and is proudly open-source.</p>
+        </div>
+        <div class="footer-copyright light-blue darken-2">
+            <div class="container">
+                © 2015 Jacob Nisnevich
+                <a class="grey-text text-lighten-4 right" href="http://github.com/jacobnisnevich/league-roles">Source Available on GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
