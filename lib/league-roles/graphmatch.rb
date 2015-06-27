@@ -46,5 +46,3 @@ class Graphmatch
     matching = Maxflow.best_matching! graph, search = search
   end
 end
-
-require 'graphmatch/maxflow'

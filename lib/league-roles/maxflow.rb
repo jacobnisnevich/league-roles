@@ -73,6 +73,3 @@ class Graphmatch::Maxflow
     }.flatten)]
   end
 end
-
-require 'graphmatch/bellman_ford'
-require 'graphmatch/bfs'
