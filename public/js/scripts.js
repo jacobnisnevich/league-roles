@@ -6,6 +6,7 @@ $(document).ready(function() {
             console.log(data);
             JSON.parse(data).forEach(function(summoner, index) {
                 $("#summoner-" + index).text(summoner.name);
+                $("#role-" + index).text(summoner.role);
                 $("#league-" + index).text(summoner.league);
                 $("#image-first-" + index).attr("src", "http://ddragon.leagueoflegends.com/cdn/5.12.1/img/champion/" + summoner.mostPlayedFirst + ".png")
                 $("#image-second-" + index).attr("src", "http://ddragon.leagueoflegends.com/cdn/5.12.1/img/champion/" + summoner.mostPlayedSecond + ".png")
