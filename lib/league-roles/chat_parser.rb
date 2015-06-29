@@ -64,14 +64,18 @@ class ChatParser
     @chat_by_player.keys.each do |name|
       prefWants = Set.new
       prefCan = Set.new
-      # prefCannot = Set.new
+      prefCannot = Set.new
       if @chat_by_player[name].empty?
         @chat_by_player[name].push "fill"
       end
       @chat_by_player[name].each do |message|
         ROLES.each do |role|
           if eval(role.upcase).any? { |word| message.downcase.include?(word) }
-            prefWants.add role
+            if NOT.any? { |word| message.downcase.include?(word) }
+              prefCannot.add role
+            else
+              prefWants.add role
+            end
           else
             prefCan.add role
           end
@@ -87,17 +91,18 @@ class ChatParser
     end
   end
 
+  # convert player preferences to vertices and edges
   def get_optimal_role()
     graph_edges = {}
 
     @preferences_by_player.keys.each do |name|
       graph_edges[name] = {}
       @preferences_by_player[name][:wants].each do |want|
-        graph_edges[name][want] = 1
+        graph_edges[name][want] = 5
       end
       @preferences_by_player[name][:can].each do |can|
         if graph_edges[name][can].nil?
-          graph_edges[name][can] = 5
+          graph_edges[name][can] = 1
         end
       end
     end

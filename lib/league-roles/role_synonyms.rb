@@ -7,6 +7,7 @@ TOP = [
 
 JUNGLE = [
   "jgl",
+  "jun",
   "jung",
   "jng",
   "jngl",
@@ -19,7 +20,8 @@ MID = [
   "middle",
   "midlde",
   "mdi",
-  "mid"
+  "mid",
+  "m1d"
 ]
 
 ADC = [
@@ -37,6 +39,14 @@ SUPPORT = [
 
 FILL = [
   "fill"
+]
+
+NOT = [
+  "no",
+  "not",
+  "can't",
+  "cant",
+  "cannot"
 ]
 
 ROLES = [

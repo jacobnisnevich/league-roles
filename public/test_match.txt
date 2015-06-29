@@ -1,0 +1,7 @@
+summoners = ['TheCupcakeGod', 'Syanne', 'Lemönparty', 'BowDownToJesus', 'RomeoNguyen']
+roles = ['Top', 'Jungle', 'Mid', 'Support', 'ADC']
+edges = {'TheCupcakeGod' => {'Support' => 100, 'Mid' => 100, 'Top' => 1, 'Jungle' => 1, 'ADC' => 1}, 'Syanne' => {'Support' => 50, 'Mid' => 50, 'Top' => 50, 'Jungle' => 50, 'ADC' => 50}, 'Lemönparty' => {'Support' => 50, 'Mid' => 50, 'Top' => 50, 'Jungle' => 50, 'ADC' => 50}, 'BowDownToJesus' => {'Support' => 1, 'Mid' => 1, 'Top' => 100, 'Jungle' => 100, 'ADC' => 1}, 'RomeoNguyen' => {'Support' => 1, 'Mid' => 100, 'Top' => 1, 'Jungle' => 1, 'ADC' => 1}}
+
+simple_left = ['a', 'b', 'c']
+simple_right = ['z', 'y', 'x']
+simple_edges = {'a' => {'y' => 100, 'z' => 100, 'x' => 1}, 'b' => {'z' => 100, 'y' => 100, 'x' => 1}, 'c' => {'x' => 100, 'z' => 1, 'y' => 100}}

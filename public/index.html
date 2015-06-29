@@ -6,6 +6,7 @@
 
     <!-- JQuery JS -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
@@ -40,13 +41,13 @@
                     <form id="chatEntry">
                         <div id="inputFormGroup">
                             <label for="inputRegion">Select your Region</label>
-                            <select name="inputRegion" id="inputRegion">
+                            <select name="inputRegion" id="inputRegion" class="validate">
                                 <option value="" disabled selected>Choose your region</option>
                                 <option value="br">Brazil</option>
                                 <option value="eune">EU Nordic & East</option>
                                 <option value="euw">EU West</option>
                                 <option value="lan">Latin America North</option>
-                                <option value="lasa">Latin America South</option>
+                                <option value="las">Latin America South</option>
                                 <option value="kr">Korea</option>
                                 <option value="na">North America</option>
                                 <option value="oce">Oceania</option>
@@ -55,7 +56,7 @@
                             </select>
                             <div class="input-field">
                                 <label for="inputChat">Enter your Champion Select Chat</label>
-                                <textarea name="inputChat" id="inputChat" class="materialize-textarea"></textarea>
+                                <textarea name="inputChat" id="inputChat" class="materialize-textarea validate"></textarea>
                             </div>
                         </div>
                         <button class="btn waves-effect waves-light light-blue lighten-1" id="chatSubmit" type="button">
